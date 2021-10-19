@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d28da34b-2562-4d0f-a5bb-e6d3fbc22595" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="advanceFlow" doc:id="6995e330-148d-4a7a-af1a-1712752b0548" >
+		<http:listener doc:name="advance" doc:id="5404c0fd-1cb0-47ac-a7b3-9da16959ab49" config-ref="HTTP_Listener_config" path="/advance"/>
+		<set-payload value='#["Hello World in Advance"]' doc:name="Set Payload" doc:id="7097b41c-f30a-41ae-b3b6-d133ac056818" />
+		<logger level="INFO" doc:name="Logger" doc:id="d2d01461-1081-495f-ba60-46546dff97ba" />
+	</flow>
+</mule>
