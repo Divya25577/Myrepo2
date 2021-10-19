@@ -42,8 +42,8 @@
                         <workerType>Micro</workerType>
                         <applicationName>advance-divya</applicationName>
                         <objectStoreV2>true</objectStoreV2>
-                    </cloudHubDeployment>
-                </configuration>
+                     </cloudHubDeployment>
+                 </configuration>
 			</plugin>
 		</plugins>
 	</build>
